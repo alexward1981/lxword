@@ -1,0 +1,58 @@
+/* The post listing component */
+.c-post-listing {
+  position: relative
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 3px rgba(#000, .3)
+  border-radius: $brad;
+  margin-bottom: $hmargin * 3
+  background: #fff;
+
+  &:before, &:after {
+    z-index: -1;
+    display: block
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    box-shadow: 0 15px 10px rgba(#000, .4);
+    transform: rotate(-2deg);
+  }
+  &:after {
+    left: auto;
+    right: 10px;
+    transform: rotate(2deg);
+  }
+  +above(m) {
+    col(1/2, cycle:2)
+    &:before, &:after {
+      display: block
+    }
+  }
+  img {
+    max-width: 100%
+    height: auto;
+    margin-bottom: $vmargin;
+  }
+  header {
+    margin-bottom: $hmargin
+  }
+  h1 {
+    font-size: 2rem
+    margin-bottom: $hmargin
+  }
+  &__entry-date {
+    font-size: 1.4rem;
+  }
+
+  &__entry-content {
+    padding: 2rem;
+  }
+
+  &__read-more {
+    margin: 1rem 0 0
+    display: inline-block
+  }
+}
