@@ -1,0 +1,33 @@
+/* The article component */
+.c-article {
+
+  h1 {
+    font-size: 4rem;
+    margin-bottom: .5rem;
+  }
+
+
+
+  p {
+    font-size: $baseFont * 1.2;
+    margin-bottom: 1rem
+
+    &:first-of-type {
+      font-weight: bold
+    }
+  }
+
+  iframe {
+    margin: 2rem auto;
+    center(100%)
+    width: 500px;
+    height: 350px;
+  }
+
+  &__post-meta {
+    display: block
+    font-size: 1.6rem
+    margin-bottom: 2rem
+  }
+
+}

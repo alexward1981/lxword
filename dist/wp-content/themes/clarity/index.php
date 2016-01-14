@@ -1,10 +1,16 @@
 <?php get_header() ?>
 	<div id="container" class="main-area">
 		<div id="content">
-<?php while (have_posts()) : the_post() ?>
 
-			<section id="post-<?php the_ID() ?>" class="c-post-listing <?php sandbox_post_class() ?>" role="main">
-                <?php the_post_thumbnail() ?>
+<?php
+while (have_posts()) : the_post() ?>
+    <?php $imgClass = (has_post_thumbnail($post_id)) ? "has-image " : "no-image "; ?>
+			<section id="post-<?php the_ID() ?>" class="c-post-listing <?php sandbox_post_class() ?> <?php echo $imgClass; ?>" role="main">
+                <?php if(has_post_thumbnail($post_id)) {
+                    the_post_thumbnail();
+                 } else {
+
+                 }?>
 				<div class="c-post-listing__entry-content">
                     <header>
                         <h1><a href="<?php the_permalink() ?>" title="<?php printf( __('Permalink to %s', 'sandbox'), the_title_attribute('echo=0') ) ?>" rel="bookmark"><?php the_title() ?></a></h1>
@@ -17,24 +23,9 @@
                     <?php edit_post_link( __( 'Edit', 'sandbox' ), "\t\t\t\t\t<span class=\"c-post-listing__edit-link o-btn\">") ?>
 				    <?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'sandbox' ) . '&after=</div>') ?>
 				</div>
-				<div class="c-post-listing__entry-meta">
-
-
-
-
-
-
-				</div>
-			</section><!-- .post -->
-
-<?php comments_template() ?>
-
+			</section>
+            <?php comments_template() ?>
 <?php endwhile; ?>
-
-
-
-		</div><!-- #content -->
-	</div><!-- #container -->
-
-<?php get_sidebar() ?>
+    </div>
+</div>
 <?php get_footer() ?>

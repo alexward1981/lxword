@@ -1,14 +1,11 @@
 
-	<div id="footer">
-		<span id="generator-link"><a href="http://wordpress.org/" title="<?php _e( 'WordPress', 'sandbox' ) ?>" rel="generator"><?php _e( 'WordPress', 'sandbox' ) ?></a></span>
-		<span class="meta-sep">|</span>
-		<span id="theme-link"><a href="http://www.plaintxt.org/themes/sandbox/" title="<?php _e( 'Sandbox theme for WordPress', 'sandbox' ) ?>" rel="designer"><?php _e( 'Sandbox', 'sandbox' ) ?></a></span>
-	</div><!-- #footer -->
+	<footer id="footer">
+		<span id="generator-link">Powered by <a href="http://wordpress.org/" title="Powered by <?php _e( 'WordPress', 'sandbox' ) ?>" rel="generator"><?php _e( 'WordPress', 'sandbox' ) ?></a></span>
+		<span class="copy"> &copy;<?php echo date(Y);?> Alexander Ward</span>
+	</footer>
 
 </div><!-- #wrapper .hfeed -->
 
 <?php wp_footer() ?>
-<script src="https://use.typekit.net/cjr8djc.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
 </body>
 </html>

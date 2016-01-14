@@ -6,17 +6,11 @@
 			<li id="pages">
 				<h3><?php _e( 'Pages', 'sandbox' ) ?></h3>
 				<ul>
-<?php wp_list_pages('title_li=&sort_column=menu_order' ) ?>
+                    <?php wp_list_pages('title_li=&sort_column=menu_order' ) ?>
 				</ul>
 			</li>
 
-			<li id="archives">
-				<h3><?php _e( 'Archives', 'sandbox' ) ?></h3>
-				<ul>
-<?php wp_get_archives('type=monthly') ?>
 
-				</ul>
-			</li>
 <?php endif; // end primary sidebar widgets  ?>
 		</ul>
 	</div><!-- #primary .sidebar -->
@@ -34,7 +28,7 @@
 				</form>
 			</li>
 
-<?php wp_list_bookmarks('title_before=<h3>&title_after=</h3>&show_images=1') ?>
+            <?php wp_list_bookmarks('title_before=<h3>&title_after=</h3>&show_images=1') ?>
 
 			<li id="rss-links">
 				<h3><?php _e( 'RSS Feeds', 'sandbox' ) ?></h3>
