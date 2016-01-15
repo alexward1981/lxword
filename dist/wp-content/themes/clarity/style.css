@@ -206,8 +206,7 @@ p {
 }
 .wrapper > .navigation li {
   display: inline-block;
-  padding: 1rem;
-  font-size: 2rem;
+  padding: 1rem 1rem 0;
   font-size: 1.6rem;
   font-weight: bold;
 }
@@ -235,6 +234,39 @@ p {
 }
 .main-area:last-child {
   margin-right: 0%;
+}
+.main-area > header h1 {
+  font-size: 3rem;
+}
+.main-area > header .archive-meta {
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 886px) {
+  .main-area > header {
+    position: absolute;
+    top: 15rem;
+  }
+  .main-area > header .archive-meta {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+    color: #fff;
+  }
+  .main-area > header .archive-meta:before,
+  .main-area > header .archive-meta:after {
+    content: '';
+    display: table;
+  }
+  .main-area > header .archive-meta:after {
+    clear: both;
+  }
+  .main-area > header .archive-meta:last-child {
+    margin-right: 0%;
+  }
 }
 footer {
   *zoom: 1;
@@ -460,9 +492,34 @@ footer .copy:last-child {
 .c-post-listing.category-insanity header:before {
   background-color: #60f;
 }
+@media only screen and (min-width: 1050px) {
+  .c-article {
+    *zoom: 1;
+    width: auto;
+    max-width: 60%;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .c-article:before,
+  .c-article:after {
+    content: '';
+    display: table;
+  }
+  .c-article:after {
+    clear: both;
+  }
+}
 .c-article h1 {
   font-size: 4rem;
   margin-bottom: 0.5rem;
+}
+.c-article h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .c-article p {
   font-size: 1.68rem;
@@ -470,6 +527,33 @@ footer .copy:last-child {
 }
 .c-article p:first-of-type {
   font-weight: bold;
+}
+.c-article ul {
+  margin: 2rem;
+}
+.c-article ul li {
+  list-style: disc;
+  margin-bottom: 0.5rem;
+}
+.c-article img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem;
+}
+.c-article .wp-caption {
+  max-width: 100%;
+  background-color: #f4fafe;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+.c-article .wp-caption img {
+  max-width: 90%;
+  margin: auto !important;
+}
+.c-article .wp-caption-text {
+  font-size: 1.4rem;
+  margin-top: 1rem;
 }
 .c-article iframe {
   margin: 2rem auto;
