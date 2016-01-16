@@ -555,7 +555,7 @@ footer .copy:last-child {
   font-size: 1.4rem;
   margin-top: 1rem;
 }
-.c-article iframe {
+.c-article > iframe {
   margin: 2rem auto;
   *zoom: 1;
   width: auto;
@@ -569,12 +569,12 @@ footer .copy:last-child {
   width: 500px;
   height: 350px;
 }
-.c-article iframe:before,
-.c-article iframe:after {
+.c-article > iframe:before,
+.c-article > iframe:after {
   content: '';
   display: table;
 }
-.c-article iframe:after {
+.c-article > iframe:after {
   clear: both;
 }
 .c-article__post-meta {

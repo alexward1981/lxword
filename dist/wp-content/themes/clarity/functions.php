@@ -497,5 +497,10 @@ add_filter( 'archive_meta', 'convert_smilies' );
 add_filter( 'archive_meta', 'convert_chars' );
 add_filter( 'archive_meta', 'wpautop' );
 
-// Remember: the Sandbox is for play.
+// Add extra features to theme
+add_theme_support( 'post-thumbnails' );
+add_theme_support( 'infinite-scroll', array(
+    'container' => 'content',
+    'footer' => 'page',
+) );
 ?>
