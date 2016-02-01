@@ -140,6 +140,27 @@ p {
   left: -100%;
   top: -100%;
 }
+@media only screen and (min-width: 800px) {
+  .wrapper {
+    *zoom: 1;
+    width: auto;
+    max-width: 1280px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .wrapper:before,
+  .wrapper:after {
+    content: '';
+    display: table;
+  }
+  .wrapper:after {
+    clear: both;
+  }
+}
 .wrapper > header {
   overflow: hidden;
   position: relative;
@@ -195,7 +216,7 @@ p {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 7rem;
+    height: 3rem;
     width: 100%;
     background: url("images/floor-pattern.jpg");
     background-size: contain;
@@ -215,6 +236,7 @@ p {
   margin: 0 0 0 2.1rem;
 }
 .main-area {
+  background-color: #fff;
   *zoom: 1;
   float: left;
   clear: none;
@@ -223,6 +245,8 @@ p {
   margin-left: 0%;
   margin-right: 3%;
   padding: 2rem;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 .main-area:before,
 .main-area:after {
@@ -492,44 +516,30 @@ footer .copy:last-child {
 .c-post-listing.category-insanity header:before {
   background-color: #60f;
 }
-@media only screen and (min-width: 1050px) {
-  .c-article {
-    *zoom: 1;
-    width: auto;
-    max-width: 60%;
-    float: none;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .c-article:before,
-  .c-article:after {
-    content: '';
-    display: table;
-  }
-  .c-article:after {
-    clear: both;
-  }
-}
 .c-article h1 {
-  font-size: 4rem;
+  font-size: 2.52rem;
   margin-bottom: 0.5rem;
 }
+@media only screen and (min-width: 600px) {
+  .c-article h1 {
+    width: 80%;
+    font-size: 7rem;
+  }
+}
 .c-article h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.52rem;
+  margin: 1.5rem 0;
 }
 .c-article p {
   font-size: 1.68rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 .c-article p:first-of-type {
   font-weight: bold;
 }
 .c-article ul {
   margin: 2rem;
+  font-size: 1.68rem;
 }
 .c-article ul li {
   list-style: disc;
@@ -539,6 +549,13 @@ footer .copy:last-child {
   max-width: 100%;
   height: auto;
   margin: 1rem;
+}
+.c-article img.aligncenter {
+  margin: 1rem auto;
+}
+.c-article img.size-full {
+  max-width: 100%;
+  width: 100%;
 }
 .c-article .wp-caption {
   max-width: 100%;
@@ -553,9 +570,10 @@ footer .copy:last-child {
 }
 .c-article .wp-caption-text {
   font-size: 1.4rem;
-  margin-top: 1rem;
+  margin-top: $vmargin;
 }
-.c-article > iframe {
+.c-article > iframe,
+.c-article p> iframe {
   margin: 2rem auto;
   *zoom: 1;
   width: auto;
@@ -570,15 +588,62 @@ footer .copy:last-child {
   height: 350px;
 }
 .c-article > iframe:before,
-.c-article > iframe:after {
+.c-article p> iframe:before,
+.c-article > iframe:after,
+.c-article p> iframe:after {
   content: '';
   display: table;
 }
-.c-article > iframe:after {
+.c-article > iframe:after,
+.c-article p> iframe:after {
   clear: both;
 }
 .c-article__post-meta {
   display: block;
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
+  font-size: 1.54rem;
+  margin-bottom: 4rem;
+}
+.c-comments h2 {
+  font-size: 1.54rem;
+  margin-bottom: 1rem;
+}
+.c-comments p {
+  clear: both;
+  padding: 1rem 0;
+}
+.c-comments .comment {
+  padding: 1rem;
+}
+.c-comments .comment:nth-child(odd) {
+  background: #f0f0f0;
+}
+.c-comments .comment-author {
+  float: left;
+}
+.c-comments .comment-meta {
+  float: right;
+}
+.c-comments .formcontainer label {
+  display: inline-block;
+  padding: 1rem 0;
+}
+.c-comments .formcontainer input,
+.c-comments .formcontainer select,
+.c-comments .formcontainer textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+.c-comments .formcontainer .form-submit {
+  padding: 1rem 0;
+}
+.c-comments .formcontainer .form-submit input {
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 1rem;
+  border: 0;
+  color: #fff;
+  background: #5085a3;
+}
+.c-comments .formcontainer .form-submit input:hover {
+  background: #5e92b0;
 }

@@ -273,7 +273,7 @@ CONTAINER;
 					return $this->get_async_code( $settings, $poll_link );
 				} else {
 					$cb      = ( $cb == 1 ? '?cb='.mktime() : false );
-					$margins = '';
+					$spacings = '';
 					$float   = '';
 
 					if ( in_array( $align, array( 'right', 'left' ) ) ) {

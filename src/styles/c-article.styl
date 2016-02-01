@@ -1,23 +1,24 @@
 /* The article component */
 .c-article {
-  +above(xl) {
-    center(60%);
-  }
 
   h1 {
-    font-size: 4rem;
-    margin-bottom: .5rem;
+    font-size: $mantle;
+    margin-bottom: ($vspacing/2);
+    +above(m) {
+      width: 80%;
+      font-size: $crust;
+    }
   }
 
   h2 {
-    font-size: 2rem;
-    margin-bottom: $vmargin;
+    font-size: $mantle;
+    margin: $vspacing * 1.5 0;
   }
 
 
   p {
     font-size: $baseFont * 1.2;
-    margin-bottom: 1rem
+    margin-bottom: $spacing * 1.2;
 
     &:first-of-type {
       font-weight: bold
@@ -25,24 +26,33 @@
   }
 
   ul {
-    margin: 2rem;
+    margin: $spacing*2;
+    font-size: $baseFont * 1.2;
     li {
       list-style: disc;
-      margin-bottom: .5rem;
+      margin-bottom: ($vspacing/2);
     }
   }
 
   img {
     max-width: 100%;
     height: auto;
-    margin: 1rem;
+    margin: $spacing;
+
+    &.aligncenter {
+      margin: $spacing auto;
+    }
+    &.size-full {
+      max-width:100%;
+      width: 100%;
+    }
   }
 
   .wp-caption {
     max-width: 100%;
     background-color: lighten($primary-con, 90%);
-    margin: 2rem auto;
-    padding: 1rem;
+    margin: ($spacing*2) auto;
+    padding: $spacing;
     text-align: center
     img {
       max-width: 90%;
@@ -51,12 +61,13 @@
   }
 
   .wp-caption-text {
-    font-size: 1.4rem;
-    margin-top: 1rem;
+    font-size: $baseFont;
+    margin-top: $vmargin;
   }
 
-  > iframe {
-    margin: 2rem auto;
+  > iframe,
+  p> iframe {
+    margin: ($spacing*2) auto;
     center(100%)
     width: 500px;
     height: 350px;
@@ -66,8 +77,7 @@
 
   &__post-meta {
     display: block
-    font-size: 1.6rem
-    margin-bottom: 2rem
+    font-size: $innercore;
+    margin-bottom: $spacing*4
   }
-
 }

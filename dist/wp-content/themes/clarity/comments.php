@@ -2,7 +2,7 @@
 	if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) )
 		die ( 'Please do not load this page directly. Thanks.' );
 ?>
-			<div id="comments">
+			<div id="comments" class="c-comments">
 <?php
 	if ( !empty($post->post_password) ) :
 		if ( $_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password ) :
@@ -26,7 +26,7 @@ foreach ( $comments as $comment )
 <?php $sandbox_comment_alt = 0 ?>
 
 				<div id="comments-list" class="comments">
-					<h3><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'sandbox') : __('<span>One</span> Comment', 'sandbox'), $comment_count) ?></h3>
+					<h2><?php printf($comment_count > 1 ? __('<span>%d</span> Comments', 'sandbox') : __('<span>One</span> Comment', 'sandbox'), $comment_count) ?></h2>
 
 					<ol>
 <?php foreach ($comments as $comment) : ?>
@@ -52,7 +52,7 @@ foreach ( $comments as $comment )
 <?php $sandbox_comment_alt = 0 ?>
 
 				<div id="trackbacks-list" class="comments">
-					<h3><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'sandbox') : __('<span>One</span> Trackback', 'sandbox'), $ping_count) ?></h3>
+					<h2><?php printf($ping_count > 1 ? __('<span>%d</span> Trackbacks', 'sandbox') : __('<span>One</span> Trackback', 'sandbox'), $ping_count) ?></h2>
 
 					<ol>
 <?php foreach ( $comments as $comment ) : ?>
@@ -79,7 +79,7 @@ foreach ( $comments as $comment )
 <?php $req = get_option('require_name_email'); // Checks if fields are required. Thanks, Adam. ;-) ?>
 
 				<div id="respond">
-					<h3><?php _e( 'Post a Comment', 'sandbox' ) ?></h3>
+					<h2><?php _e( 'Post a Comment', 'sandbox' ) ?></h2>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
 					<p id="login-req"><?php printf(__('You must be <a href="%s" title="Log in">logged in</a> to post a comment.', 'sandbox'),

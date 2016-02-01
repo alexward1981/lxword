@@ -40,13 +40,15 @@ p {
 }
 
 .wrapper {
+  +above(l) {
+   center(1280px);
+  }
 
   > header {
     overflow: hidden
     position: relative
     background-color: #e0deda;
     background: url(images/wallpaper-pattern.jpg)
-
     text-align: center
     padding: 1rem 0;
     box-shadow: 0 0 10px rgba(#000, .6);
@@ -84,7 +86,7 @@ p {
         position: absolute
         left: 0;
         bottom: 0;
-        height: 7rem;
+        height: 3rem;
         width: 100%;
         background: url(images/floor-pattern.jpg);
         background-size: contain;
@@ -112,8 +114,11 @@ p {
   }
 }
 .main-area {
+  background-color: #fff;
   col(1);
-  padding: 2rem
+  padding: 2rem;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
   > header {
     h1 {
       font-size: 3rem
